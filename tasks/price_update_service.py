@@ -8,7 +8,7 @@ from celery import Celery
 from tasks.insert_log import log_price_change
 
 celery_app = Celery('tasks', broker='pyamqp://guest@localhost//')
-client = MongoClient(os.environ["MONGODB_URI"])
+client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
 db = client["digikala"]
 products_collection = db["products"]
 

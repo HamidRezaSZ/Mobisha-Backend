@@ -1,10 +1,11 @@
 import datetime
+import os
 
 import jwt
 from fastapi import HTTPException
 from fastapi.security import HTTPBearer
 
-SECRET_KEY = "your_secret_key"
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 security = HTTPBearer()
 

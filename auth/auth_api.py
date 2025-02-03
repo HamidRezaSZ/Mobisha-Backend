@@ -8,7 +8,7 @@ from auth.jwt_token import create_jwt_token
 
 app = FastAPI()
 
-client = MongoClient(os.environ["MONGODB_URI"])
+client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
 db = client["digikala"]
 users_collection = db["users"]
 

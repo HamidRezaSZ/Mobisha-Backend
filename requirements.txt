@@ -12,12 +12,14 @@ click-plugins==1.1.1
 click-repl==0.3.0
 dnspython==2.7.0
 fastapi==0.115.8
+h11==0.14.0
 idna==3.10
 kombu==5.4.2
 prompt_toolkit==3.0.50
 pycparser==2.22
 pydantic==2.10.6
 pydantic_core==2.27.2
+PyJWT==2.10.1
 pymongo==4.11
 python-dateutil==2.9.0.post0
 rabbitmq==0.2.0
@@ -28,5 +30,6 @@ starlette==0.45.3
 typing_extensions==4.12.2
 tzdata==2025.1
 urllib3==2.3.0
+uvicorn==0.34.0
 vine==5.1.0
 wcwidth==0.2.13

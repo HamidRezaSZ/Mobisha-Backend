@@ -8,7 +8,7 @@ from pymongo import MongoClient
 from auth.jwt_token import security, verify_jwt
 
 app = FastAPI()
-client = MongoClient(os.environ["MONGODB_URI"])
+client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
 db = client["digikala"]
 products_collection = db["products"]
 

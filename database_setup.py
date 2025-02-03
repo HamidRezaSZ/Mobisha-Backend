@@ -2,10 +2,8 @@ import os
 
 from pymongo import MongoClient
 
-os.environ["MONGODB_URI"] = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
-
 try:
-    client = MongoClient(os.environ["MONGODB_URI"])
+    client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
     db = client["digikala"]
 
     # Users collection

@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from celery import Celery
 
 celery_app = Celery('tasks', broker='pyamqp://guest@localhost//')
-client = MongoClient(os.environ["MONGODB_URI"])
+client = MongoClient(os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
 db = client["digikala"]
 products_collection = db["products"]
 price_history_collection = db["price_history"]
